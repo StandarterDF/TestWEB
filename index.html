@@ -12,14 +12,7 @@
     <header id="header">
         <div class="header-content">
             <div class="logo-placeholder">
-                <svg width="32" height="32" viewBox="0 0 32 32">
-                    <circle cx="16" cy="16" r="14" fill="rgba(255,255,255,0.25)"/>
-                    <path d="M16 8 Q20 12 20 16 Q20 21 16 25 Q12 21 12 16 Q12 12 16 8" fill="#fff"/>
-                    <path d="M16 25 Q18 27 18 30" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
-                    <path d="M16 25 Q14 27 14 30" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
-                    <ellipse cx="13" cy="17" rx="3" ry="5" fill="#fff" transform="rotate(-25 13 17)" opacity="0.8"/>
-                    <ellipse cx="19" cy="17" rx="3" ry="5" fill="#fff" transform="rotate(25 19 17)" opacity="0.8"/>
-                </svg>
+                <img src="static/images/logo.webp" alt="Эко-Оргамин логотип" class="logo-image">
             </div>
             <div class="logo-text">
                 Эко-Оргамин
@@ -34,7 +27,11 @@
                 <li class="mobile-menu-close" id="mobileMenuClose">&times;</li>
                 <li><a href="#home" class="nav-link">Главная</a></li>
                 <li><a href="#about" class="nav-link">О компании</a></li>
+                <li><a href="#production" class="nav-link">Производство</a></li>
+                <li><a href="#advantages" class="nav-link">Преимущества</a></li>
                 <li><a href="#products" class="nav-link">Продукция</a></li>
+                <li><a href="#research" class="nav-link">Исследования</a></li>
+                <li><a href="#certificates" class="nav-link">Сертификаты</a></li>
                 <li><a href="#contact" class="nav-link">Контакты</a></li>
             </ul>
         </nav>
@@ -43,22 +40,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-icon">
-                <svg width="120" height="120" viewBox="0 0 120 120">
-                    <defs>
-                        <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#4CAF50"/>
-                            <stop offset="100%" style="stop-color:#2E7D32"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="60" cy="60" r="55" fill="#E8F5E9"/>
-                    <circle cx="60" cy="60" r="45" fill="url(#heroGrad)" opacity="0.1"/>
-                    <path d="M60 30 Q72 42 72 54 Q72 68 60 80 Q48 68 48 54 Q48 42 60 30" fill="#4CAF50"/>
-                    <path d="M60 80 Q66 87 66 96" stroke="#2E7D32" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <path d="M60 80 Q54 87 54 96" stroke="#2E7D32" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <ellipse cx="52" cy="58" rx="7" ry="11" fill="#66BB6A" transform="rotate(-25 52 58)"/>
-                    <ellipse cx="68" cy="58" rx="7" ry="11" fill="#66BB6A" transform="rotate(25 68 58)"/>
-                    <ellipse cx="60" cy="48" rx="5" ry="9" fill="#81C784"/>
-                </svg>
+                <img src="static/images/logo.webp" alt="Эко-Оргамин логотип" class="hero-logo">
             </div>
             <h1>Сила природы для <span>вашего урожая</span></h1>
             <p>Натуральные органические удобрения от компании Агро-Прогресс. Безопасно, эффективно, экологично.</p>
@@ -67,8 +49,8 @@
     </section>
 
     <section id="about" class="about fade-in">
-        <h2 class="section-title">О компании Агро-Прогресс</h2>
-        
+        <h2 class="section-title section-title--center">О компании Агро-Прогресс</h2>
+
         <div class="about-grid">
             <div class="about-content">
                 <div class="about-lead">
@@ -120,23 +102,118 @@
             
             <div class="about-visual">
                 <div class="about-badge">
-                    <svg width="200" height="200" viewBox="0 0 200 200">
-                        <defs>
-                            <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#4CAF50"/>
-                                <stop offset="100%" style="stop-color:#2E7D32"/>
-                            </linearGradient>
-                        </defs>
-                        <circle cx="100" cy="100" r="90" fill="url(#badgeGrad)"/>
-                        <circle cx="100" cy="100" r="75" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                        <path d="M100 55 Q115 70 115 85 Q115 100 100 115 Q85 100 85 85 Q85 70 100 55" fill="white"/>
-                        <path d="M100 115 Q106 122 106 130" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
-                        <path d="M100 115 Q94 122 94 130" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
-                        <ellipse cx="92" cy="88" rx="8" ry="12" fill="white" opacity="0.7" transform="rotate(-25 92 88)"/>
-                        <ellipse cx="108" cy="88" rx="8" ry="12" fill="white" opacity="0.7" transform="rotate(25 108 88)"/>
-                        <text x="100" y="165" text-anchor="middle" fill="white" font-size="14" font-weight="700">ЭКО-ОРГАМИН</text>
-                    </svg>
+                    <img src="static/images/logo.webp" alt="Эко-Оргамин логотип" class="about-badge-image">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Section -->
+    <section id="production" class="production">
+        <div class="production-header fade-in">
+            <h2 class="section-title">Производство Эко-оргамина</h2>
+            <p class="production-subtitle">Фирма ООО "Агропрогресс" занимается разработкой и производством продукта Эко-оргамин уже более 10 лет.</p>
+            <p class="production-description">Наша компания контролирует каждый этап производства, гарантируя высокое качество.</p>
+        </div>
+
+        <div class="production-preview fade-in">
+            <div class="production-preview-slider">
+                <button class="slider-btn slider-prev" id="productionSliderPrev">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="production-slider-wrapper">
+                    <div class="production-slider-track" id="productionSliderTrack">
+                        <div class="slide-item">
+                            <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/c16d3c1e-70c6-4e59-9628-70ee2da00c2f.jpg" alt="Производство" class="slide-image" onclick="openProductionGallery(this, 0)">
+                        </div>
+                        <div class="slide-item">
+                            <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/bf29379a-1373-434a-a690-4a396bb5a4a9.jpg" alt="Производство" class="slide-image" onclick="openProductionGallery(this, 1)">
+                        </div>
+                        <div class="slide-item">
+                            <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/baaea6c8-2aaf-413b-be06-adcad426dfca.jpg" alt="Производство" class="slide-image" onclick="openProductionGallery(this, 2)">
+                        </div>
+                        <div class="slide-item">
+                            <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/04993ab3-fda7-4f62-9867-017014af9274.jpg" alt="Производство" class="slide-image" onclick="openProductionGallery(this, 3)">
+                        </div>
+                        <div class="slide-item">
+                            <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/d24d8c1b-3e19-45cf-a63e-2b602686631c.jpg" alt="Производство" class="slide-image" onclick="openProductionGallery(this, 4)">
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn slider-next" id="productionSliderNext">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="slider-dots" id="productionSliderDots"></div>
+        </div>
+    </section>
+
+    <section id="advantages" class="advantages">
+        <div class="advantages-header fade-in">
+            <div class="advantages-caption">экологический продукт</div>
+            <h2 class="section-title">Преимущества Эко-Оргамина</h2>
+            <p class="advantages-subtitle">Почему выбирают Эко-Оргамин: органические удобрения высшего качества для эффективного земледелия.</p>
+        </div>
+
+        <div class="advantages-grid fade-in">
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/94b47259-3445-4991-8593-75aa67d786e6.png" alt="Экологически чистое производство">
+                </div>
+                <h3 class="advantage-title">Экологически чистое производство</h3>
+                <p class="advantage-desc">Состав продукта полностью натуральный, в основе которого дефекат, формирующийся при переработке сахарной свеклы.</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/2fcf85d6-0f69-4698-8fbd-50f4716415a9.jpg" alt="Повышение плодородия почвы">
+                </div>
+                <h3 class="advantage-title">Повышение плодородия почвы</h3>
+                <p class="advantage-desc">Наши удобрения разработаны для увеличения урожайности всех видов сельскохозяйственных культур за счет улучшения структуры почвы и обогащения необходимыми питательными микроэлементами.</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/dd7339d4-9d6d-494a-8dbd-2eaabbd6aade.jpg" alt="Улучшает структуру почвы">
+                </div>
+                <h3 class="advantage-title">Улучшает структуру почвы</h3>
+                <p class="advantage-desc">- разрыхляет структуру<br>- повышает способность удерживать влагу (для всех видов)<br>- активирует жизнедеятельность полезных микроорганизмов</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/430b50f8-04d5-4b8a-a9c3-952806a782dd.jpg" alt="Экономичное решение">
+                </div>
+                <h3 class="advantage-title">Экономичное решение</h3>
+                <p class="advantage-desc">Эффективные удобрения по доступной цене, помогающие снизить затраты на выращивание культур. Улучшенная формула и инновационные технологии изготовления, значительно снижают норму внесения удобрения в почву</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/41da6762-65af-4481-8c6e-b74679066050.jpg" alt="Нейтрализует кислые почвы">
+                </div>
+                <h3 class="advantage-title">Нейтрализует кислые почвы</h3>
+                <p class="advantage-desc">Благодаря высокому содержанию извести (до 60–80%) приводит в норму pH кислых почв.</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/c4a3235d-d89b-4ed8-9082-8a4861a5e889.jpg" alt="Обогащает почву питательными веществами">
+                </div>
+                <h3 class="advantage-title">Обогащает почву питательными веществами</h3>
+                <p class="advantage-desc">Содержит:<br>- Кальций (CaO) – снижает кислотность почвы (раскисляет), улучшает структуру.<br>- Фосфор (P₂O₅) – способствует развитию корневой системы и цветению.<br>- Калий (K₂O) – повышает устойчивость растений к болезням и засухе.<br>- Органические вещества – улучшают плодородие почвы.</p>
+            </div>
+
+            <div class="advantage-card">
+                <div class="advantage-icon">
+                    <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/4a7aa9a3-af02-48c5-90bc-dbd57d0073c3.jpg" alt="Собственное производство">
+                </div>
+                <h3 class="advantage-title">Собственное производство</h3>
+                <p class="advantage-desc">Наша компания контролирует каждый этап производства, гарантируя высокое качество удобрений.</p>
             </div>
         </div>
     </section>
@@ -218,29 +295,67 @@
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal">
             <span class="modal-close" id="modalClose">&times;</span>
-            <div class="modal-icon">
-                <svg width="35" height="35" viewBox="0 0 35 35">
-                    <circle cx="17.5" cy="17.5" r="15" fill="none" stroke="#4CAF50" stroke-width="2"/>
-                    <path d="M17.5 10 L17.5 20 L25 20" stroke="#2E7D32" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                </svg>
-            </div>
-            <h3 id="modalTitle">Заказ товара</h3>
-            <p>Выберите удобную площадку для покупки:</p>
-            <div class="marketplace-links">
-                <a href="https://www.ozon.ru" target="_blank" class="marketplace-btn ozon-btn">
-                    <svg class="marketplace-icon" viewBox="0 0 30 30">
-                        <rect width="30" height="30" rx="6" fill="#005BFF"/>
-                        <text x="15" y="20" text-anchor="middle" fill="white" font-size="9" font-weight="bold">OZON</text>
-                    </svg>
-                    Купить на Ozon
-                </a>
-                <a href="https://www.wildberries.ru" target="_blank" class="marketplace-btn wb-btn">
-                    <svg class="marketplace-icon" viewBox="0 0 30 30">
-                        <rect width="30" height="30" rx="6" fill="#CB11AB"/>
-                        <text x="15" y="20" text-anchor="middle" fill="white" font-size="8" font-weight="bold">WB</text>
-                    </svg>
-                    Купить на Wildberries
-                </a>
+            <div class="modal-content">
+                <div class="modal-grid">
+                    <div class="modal-gallery">
+                        <div class="modal-main-image">
+                            <img id="modalMainImg" src="" alt="Эко-Оргамин">
+                        </div>
+                        <div class="modal-thumbnails" id="modalThumbnails">
+                            <!-- Thumbnails will be added dynamically -->
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <h3 id="modalTitle">Эко-Оргамин</h3>
+                        <p class="modal-subtitle" id="modalSubtitle">Удобная упаковка.</p>
+                        <ul class="modal-specs" id="modalSpecs">
+                            <li>
+                                <span class="spec-label">Тип</span>
+                                <span class="spec-value">органическое удобрение</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">цвет</span>
+                                <span class="spec-value">серый</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">вес</span>
+                                <span class="spec-value">400 гр.</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Класс безопасности</span>
+                                <span class="spec-value">4 (безопасный)</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Срок годности</span>
+                                <span class="spec-value">Неограничен</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Гарантийный срок</span>
+                                <span class="spec-value">12 мес.</span>
+                            </li>
+                        </ul>
+                        <div class="modal-price">
+                            <span class="modal-current-price" id="modalPrice">Акция : 190</span>
+                            <s class="modal-old-price" id="modalOldPrice">250</s>
+                        </div>
+                        <div class="marketplace-links">
+                            <a href="https://www.ozon.ru" target="_blank" class="marketplace-btn ozon-btn">
+                                <svg class="marketplace-icon" viewBox="0 0 30 30">
+                                    <rect width="30" height="30" rx="6" fill="#005BFF"/>
+                                    <text x="15" y="20" text-anchor="middle" fill="white" font-size="9" font-weight="bold">OZON</text>
+                                </svg>
+                                Купить на Ozon
+                            </a>
+                            <a href="https://www.wildberries.ru" target="_blank" class="marketplace-btn wb-btn">
+                                <svg class="marketplace-icon" viewBox="0 0 30 30">
+                                    <rect width="30" height="30" rx="6" fill="#CB11AB"/>
+                                    <text x="15" y="20" text-anchor="middle" fill="white" font-size="8" font-weight="bold">WB</text>
+                                </svg>
+                                Купить на Wildberries
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -249,23 +364,15 @@
         <h2 class="section-title fade-in">Свяжитесь с нами</h2>
         <div class="contact-container">
             <div class="contact-info fade-in">
-                <h3>🏢 Агро-Прогресс</h3>
+                <h3>🏢 ООО «Агропрогресс»</h3>
                 <p>Мы всегда готовы ответить на ваши вопросы по применению удобрений и условиям сотрудничества.</p>
                 <div class="contact-item">
-                    <span style="font-size: 1.3rem;">📍</span>
-                    <span>г. Воронеж</span>
-                </div>
-                <div class="contact-item">
                     <span style="font-size: 1.3rem;">📞</span>
-                    <span>+7 (999) 000-00-00</span>
+                    <span>+7 980 558-73-27</span>
                 </div>
                 <div class="contact-item">
                     <span style="font-size: 1.3rem;">✉️</span>
-                    <span>info@agro-progress.ru</span>
-                </div>
-                <div class="contact-item">
-                    <span style="font-size: 1.3rem;">🕐</span>
-                    <span>Пн-Пт: 9:00 - 18:00</span>
+                    <span>info@eco-orgamin.ru</span>
                 </div>
             </div>
 
@@ -287,14 +394,231 @@
         </div>
     </section>
 
+    <section id="research" class="research">
+        <div class="research-header fade-in">
+            <h2 class="section-title">Научные исследования</h2>
+            <p class="research-subtitle">Публикации и исследования эффективности наших удобрений</p>
+        </div>
+
+        <div class="research-container fade-in">
+            <div class="research-item">
+                <div class="research-header-card" onclick="toggleResearch(this)">
+                    <div class="research-title-wrapper">
+                        <div class="research-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#4CAF50"/>
+                                <path d="M2 17L12 22L22 17" stroke="#2E7D32" stroke-width="2" fill="none"/>
+                                <path d="M2 12L12 17L22 12" stroke="#2E7D32" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="research-title">Влияние дефека на агрохимические свойства и буферную способность чернозема выщелоченного</h3>
+                    </div>
+                    <div class="research-meta">
+                        <span class="research-year">2022</span>
+                        <span class="research-type">Исследование</span>
+                    </div>
+                    <div class="research-toggle">
+                        <svg width="20" height="20" viewBox="0 0 20 20" class="toggle-icon">
+                            <path d="M5 7L10 12L15 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="research-content">
+                    <div class="research-authors">
+                        <strong>Авторы:</strong> Д.Х. Фазыльянова¹, Ф.И. Назырова¹, Г.А. Хималетдинова²<br>
+                        <small>¹Уфимский институт биологии УНЦ РАН, ²Центр агрохимической службы "Башкирский"</small>
+                    </div>
+                    <p class="research-abstract">
+                        Изучили влияние известкового материала — дефека свеклосахарного производства на агрохимические свойства чернозема выщелоченного и кислотно-основную буферность почвы в полевом производственном опыте. Внесение дефека сахарного производства (в дозе 6.5 т/га) в паровое поле в чернозем выщелоченный способствовало снижению кислотности почвы и значительному увеличению буферной площади в кислотном интервале.
+                    </p>
+                    <div class="research-results">
+                        <h4>Основные результаты:</h4>
+                        <ul>
+                            <li>Снижение кислотности почвы: рНН₂О — на 0.6 ед., рНКС1 — на 1.35 ед.</li>
+                            <li>Увеличение обменного кальция на 2.5 смоль (экв)/100 г почвы</li>
+                            <li>Повышение буферной способности в кислотном диапазоне на 10 см²</li>
+                            <li>Увеличение урожайности озимой пшеницы на 2.6 ц/га (при дозе 6.5 т/га)</li>
+                            <li>Повышение подвижности фосфора в 2 раза</li>
+                        </ul>
+                    </div>
+                    <a href="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/cf94d3da-2d76-4fe7-b89f-177f991f50dc.pdf" class="research-link" target="_blank" download>Скачать PDF версию →</a>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="research-header-card" onclick="toggleResearch(this)">
+                    <div class="research-title-wrapper">
+                        <div class="research-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" stroke="#4CAF50" stroke-width="2" fill="none"/>
+                                <path d="M12 6V12L16 14" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="research-title">Дефека — перспективное удобрение-мелиорант</h3>
+                    </div>
+                    <div class="research-meta">
+                        <span class="research-year">2023</span>
+                        <span class="research-type">Аналитика</span>
+                    </div>
+                    <div class="research-toggle">
+                        <svg width="20" height="20" viewBox="0 0 20 20" class="toggle-icon">
+                            <path d="M5 7L10 12L15 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="research-content">
+                    <div class="research-authors">
+                        <strong>Авторы:</strong> В.Д. Муха, И.Я. Пигорев, А.Л. Ачкасов, В.Н. Недбаев, О.Н. Мирошниченко, С.И. Худяков, Е.В. Бельчиков<br>
+                        <small>Курская государственная сельскохозяйственная академия</small>
+                    </div>
+                    <p class="research-abstract">
+                        Рассмотрено использование дефекатов как перспективного удобрения-мелиоранта. Дефека — комплексный мелиорант-удобрение, содержащий кроме CaCO₃ до 15% органического вещества, 0.7-0.9% азота, 0.3-1.0% фосфора и 0.6-1.1% калия, а также сбалансированный комплекс микроэлементов.
+                    </p>
+                    <div class="research-results">
+                        <h4>Ключевые выводы:</h4>
+                        <ul>
+                            <li>Прибавка урожайности культур при совместном внесении с удобрениями: 29-35%</li>
+                            <li>Повышение сахаристости корнеплодов сахарной свеклы на 17-19%</li>
+                            <li>Увеличение содержания клейковины в озимой пшенице на 20-27%</li>
+                            <li>Снижение кислотности почвы и оптимизация почвенных характеристик</li>
+                            <li>Высокий экономический эффект: уровень рентабельности до 71%</li>
+                        </ul>
+                    </div>
+                    <a href="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/b1bd77d6-e5d9-4aff-9a02-47fc2fec26bf.pdf" class="research-link" target="_blank" download>Скачать PDF версию →</a>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="research-header-card" onclick="toggleResearch(this)">
+                    <div class="research-title-wrapper">
+                        <div class="research-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#4CAF50"/>
+                            </svg>
+                        </div>
+                        <h3 class="research-title">Практическое использование удобрения Эко-Оргамина</h3>
+                    </div>
+                    <div class="research-meta">
+                        <span class="research-year">2025</span>
+                        <span class="research-type">Практическое руководство</span>
+                    </div>
+                    <div class="research-toggle">
+                        <svg width="20" height="20" viewBox="0 0 20 20" class="toggle-icon">
+                            <path d="M5 7L10 12L15 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="research-content">
+                    <div class="research-authors">
+                        <strong>Дата публикации:</strong> 25 июня 2025
+                    </div>
+                    <p class="research-abstract">
+                        Практическое руководство по применению органического удобрения «Эко-Оргамин» в сельском хозяйстве. Рекомендации по дозировкам, способам внесения и особенностям использования для различных культур.
+                    </p>
+                    <div class="research-images">
+                        <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/55450d06-1ae1-44a3-af1a-d4503267ecfd.jpg" alt="Применение Эко-Оргамина" class="research-image" onclick="openImageGallery(this, 0)">
+                        <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/3103ef77-6bc7-4425-965c-24dcecd7f46b.jpg" alt="Внесение удобрения в почву" class="research-image" onclick="openImageGallery(this, 1)">
+                        <img src="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/630c0481-0779-4473-bb10-c360e671a4c1.jpg" alt="Результат применения удобрения" class="research-image" onclick="openImageGallery(this, 2)">
+                    </div>
+                    <div class="research-results">
+                        <h4>Основные рекомендации:</h4>
+                        <ul>
+                            <li>Оптимальные сроки внесения: осень под зябь или весна перед посевом</li>
+                            <li>Норма внесения: 400-600 кг/га в зависимости от типа почвы</li>
+                            <li>Равномерное распределение по поверхности с последующей заделкой</li>
+                            <li>Совместимость с минеральными удобрениями и органикой</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="certificates-header fade-in">
+            <h2 class="section-title">Сертификаты на продукцию</h2>
+            <p class="certificates-subtitle">Каждая партия продукции ООО «Агропрогресс» тщательно проверяется на соответствие стандартам качества в лабораторных условиях.</p>
+        </div>
+
+        <div class="certificates-container fade-in">
+            <div class="certificate-card">
+                <div class="certificate-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48">
+                        <rect x="8" y="4" width="32" height="40" rx="2" fill="#E8F5E9"/>
+                        <rect x="8" y="4" width="32" height="8" rx="2" fill="#4CAF50"/>
+                        <line x1="14" y1="18" x2="34" y2="18" stroke="#2E7D32" stroke-width="2"/>
+                        <line x1="14" y1="24" x2="34" y2="24" stroke="#2E7D32" stroke-width="2"/>
+                        <line x1="14" y1="30" x2="34" y2="30" stroke="#2E7D32" stroke-width="2"/>
+                        <line x1="14" y1="36" x2="34" y2="36" stroke="#2E7D32" stroke-width="2"/>
+                        <circle cx="24" cy="24" r="8" fill="#4CAF50" opacity="0.3"/>
+                        <path d="M20 24L22 26L28 20" stroke="#2E7D32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="certificate-title">Паспорт безопасности химической продукции</h3>
+                <a href="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/9b1026de-73ba-49b6-9fad-638283868f92.pdf" class="certificate-link" target="_blank">
+                    Открыть документ
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M10 5L15 10L10 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="certificate-card">
+                <div class="certificate-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20" fill="#E8F5E9"/>
+                        <circle cx="24" cy="24" r="14" fill="none" stroke="#4CAF50" stroke-width="2"/>
+                        <path d="M18 24L22 28L30 20" stroke="#2E7D32" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="24" cy="12" r="4" fill="#4CAF50"/>
+                        <path d="M24 16V20" stroke="#4CAF50" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3 class="certificate-title">Сертификат соответствия</h3>
+                <a href="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/20038fb9-41af-4362-8bcf-12d6763c4b61.pdf" class="certificate-link" target="_blank">
+                    Открыть документ
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M10 5L15 10L10 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Modal -->
+    <div class="image-gallery-overlay" id="imageGalleryOverlay" onclick="closeImageGallery()">
+        <div class="image-gallery-modal" onclick="event.stopPropagation()">
+            <button class="image-gallery-close" onclick="closeImageGallery()">&times;</button>
+            <button class="image-gallery-nav image-gallery-prev" onclick="changeImage(-1)">&#10094;</button>
+            <img id="imageGalleryMain" src="" alt="Gallery image" class="image-gallery-main">
+            <button class="image-gallery-nav image-gallery-next" onclick="changeImage(1)">&#10095;</button>
+            <div class="image-gallery-counter" id="imageGalleryCounter"></div>
+        </div>
+    </div>
+
+    <!-- Production Gallery Modal -->
+    <div class="image-gallery-overlay" id="productionGalleryOverlay" onclick="closeProductionGallery()">
+        <div class="image-gallery-modal" onclick="event.stopPropagation()">
+            <button class="image-gallery-close" onclick="closeProductionGallery()">&times;</button>
+            <button class="image-gallery-nav image-gallery-prev" onclick="changeProductionImage(-1)">&#10094;</button>
+            <img id="productionGalleryMain" src="" alt="Production gallery image" class="image-gallery-main">
+            <button class="image-gallery-nav image-gallery-next" onclick="changeProductionImage(1)">&#10095;</button>
+            <div class="image-gallery-counter" id="productionGalleryCounter"></div>
+        </div>
+    </div>
+
     <footer>
+        <div class="footer-logo">
+            <img src="static/images/logo.webp" alt="Эко-Оргамин логотип" class="footer-logo-image">
+        </div>
         <div class="logo-text">
-            🌿 Эко-Оргамин
+            Эко-Оргамин
             <span>Агро-Прогресс</span>
         </div>
         <div class="footer-divider"></div>
-        <p>© 2024 Компания Агро-Прогресс. Все права защищены.</p>
-        <p style="margin-top: 0.5rem; opacity: 0.6;">Натуральные удобрения для вашего сада и огорода</p>
+        <p>© 2023 ООО «Агропрогресс». Производство органических удобрений.</p>
     </footer>
 
     <script src="index.js"></script>
