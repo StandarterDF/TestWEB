@@ -257,12 +257,22 @@ document.addEventListener('keydown', function(e) {
 });
 
 
-// Form submit
+// Form submit - открывает почтовый клиент с заполненными данными
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Ваше сообщение отправлено! Мы скоро свяжемся с вами.');
-    e.target.reset();
+    
+    const name = document.getElementById('contactName').value;
+    const message = document.getElementById('contactMessage').value;
+    
+    const subject = encodeURIComponent(`Вопрос от ${name}`);
+    const body = encodeURIComponent(
+        `Здравствуйте!\n\n` +
+        `Меня зовут: ${name}\n\n` +
+        `Сообщение:\n${message}`
+    );
+    
+    window.location.href = `mailto:info@eco-orgamin.ru?subject=${subject}&body=${body}`;
 });
 
 
