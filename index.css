@@ -1347,11 +1347,20 @@ nav a:hover {
     padding: 0;
     max-width: 900px;
     width: 90%;
+    max-height: 90vh;
     position: relative;
     transform: translateY(30px);
     transition: transform 0.3s ease;
     box-shadow: 0 25px 80px rgba(0,0,0,0.2);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content {
+    overflow-y: auto;
+    flex: 1;
+    padding: 0;
 }
 
 .modal-overlay.active .modal {
@@ -1970,13 +1979,20 @@ footer p {
         padding: 1.5rem;
     }
 
+    .modal {
+        width: 95%;
+        max-height: 95vh;
+        margin: 1rem auto;
+    }
+
     .modal-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
     .modal-main-image {
-        height: 280px;
+        height: 250px;
+        min-height: 200px;
     }
 
     .modal-thumbnails-wrapper .slider-btn {
