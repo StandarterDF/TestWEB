@@ -38,7 +38,7 @@ const productsData = {
     'Эко-Оргамин 400г': {
         name: 'Эко-Оргамин Старт',
         subtitle: 'Удобная упаковка для точечного внесения',
-        price: '190',
+        price: '93',
         oldPrice: '250',
         images: [
             'static/images/Products/400/1.webp',
@@ -59,12 +59,16 @@ const productsData = {
             { label: 'Класс безопасности', value: '4 (безопасный)' },
             { label: 'Срок годности', value: 'Неограничен' },
             { label: 'Гарантийный срок', value: '12 мес.' }
-        ]
+        ],
+        marketplaceLinks: {
+            ozon: 'https://www.ozon.ru/product/eko-orgamin-organicheskoe-udobrenie-dlya-uluchsheniya-pochvy-400-g-2972914790',
+            wb: 'https://www.wildberries.ru/catalog/601060246'
+        }
     },
     'Эко-Оргамин 3000г': {
         name: 'Эко-Оргамин Профи',
         subtitle: 'Выгодная упаковка для больших огородов',
-        price: '2 100',
+        price: '365',
         oldPrice: '2 800',
         images: [
             'static/images/Products/3000/1.webp',
@@ -83,7 +87,11 @@ const productsData = {
             { label: 'Класс безопасности', value: '4 (безопасный)' },
             { label: 'Срок годности', value: 'Неограничен' },
             { label: 'Гарантийный срок', value: '12 мес.' }
-        ]
+        ],
+        marketplaceLinks: {
+            ozon: 'https://www.ozon.ru/product/eko-orgamin-organicheskoe-udobrenie-dlya-uluchsheniya-pochvy-3000-g-3552516655/',
+            wb: 'https://www.wildberries.ru/catalog/846326541'
+        }
     }
 };
 
@@ -179,6 +187,14 @@ window.openModal = function(productKey) {
             <span class="spec-value">${spec.value}</span>
         </li>
     `).join('');
+
+    // Set marketplace links
+    const ozonBtn = document.querySelector('.ozon-btn');
+    const wbBtn = document.querySelector('.wb-btn');
+    if (product.marketplaceLinks) {
+        ozonBtn.href = product.marketplaceLinks.ozon;
+        wbBtn.href = product.marketplaceLinks.wb;
+    }
 
     // Set images
     if (product.images.length > 0) {
