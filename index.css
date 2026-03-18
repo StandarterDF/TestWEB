@@ -711,10 +711,9 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.advantage-icon img {
+.advantage-icon svg {
     width: 70%;
     height: 70%;
-    object-fit: contain;
 }
 
 .advantage-title {
@@ -1413,25 +1412,39 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+.modal-thumbnails-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.modal-thumbnails-wrapper .slider-btn {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.modal-thumbnails-wrapper .slider-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
 .modal-thumbnails {
     display: flex;
     gap: 0.75rem;
     overflow-x: auto;
+    overflow-y: hidden;
     padding-bottom: 0.5rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex: 1;
+    max-width: calc((60px + 0.75rem) * 5);
 }
 
 .modal-thumbnails::-webkit-scrollbar {
-    height: 6px;
-}
-
-.modal-thumbnails::-webkit-scrollbar-track {
-    background: var(--bg-light);
-    border-radius: 3px;
-}
-
-.modal-thumbnails::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
-    border-radius: 3px;
+    display: none;
 }
 
 .thumbnail-item {
@@ -1806,6 +1819,16 @@ footer p {
 
     .modal-main-image {
         height: 280px;
+    }
+
+    .modal-thumbnails-wrapper .slider-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .modal-thumbnails-wrapper .slider-btn svg {
+        width: 14px;
+        height: 14px;
     }
 
     .modal-info h3 {

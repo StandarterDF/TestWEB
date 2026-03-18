@@ -41,10 +41,16 @@ const productsData = {
         price: '190',
         oldPrice: '250',
         images: [
-            'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/07dd671f-963f-4168-80e6-a6d1c5d2dec1.jpg',
-            'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/6763e6a4-6794-4eb7-8d60-e1d4ba33213d.jpg',
-            'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/4ed6a88e-f106-46b6-8acc-e3f85b314b26.jpg',
-            'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/646cf045-0958-4f6b-82d5-1a7568312809.jpg'
+            'static/images/Products/400/1.webp',
+            'static/images/Products/400/2.webp',
+            'static/images/Products/400/3.webp',
+            'static/images/Products/400/4.webp',
+            'static/images/Products/400/5.webp',
+            'static/images/Products/400/6.webp',
+            'static/images/Products/400/7.webp',
+            'static/images/Products/400/8.webp',
+            'static/images/Products/400/9.webp',
+            'static/images/Products/400/10.webp'
         ],
         specs: [
             { label: 'Тип', value: 'органическое удобрение' },
@@ -61,9 +67,14 @@ const productsData = {
         price: '2 100',
         oldPrice: '2 800',
         images: [
-            'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/6500e5c6-ef92-4ee8-9ed7-91116330eaa0.jpg',
-            'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/fce7774f-a9e4-42ef-9272-93b8165ea1d7.jpg',
-            'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/c5a0457a-817a-4abb-bbff-7e810f4da1f8.jpg'
+            'static/images/Products/3000/1.webp',
+            'static/images/Products/3000/2.webp',
+            'static/images/Products/3000/3.webp',
+            'static/images/Products/3000/4.webp',
+            'static/images/Products/3000/5.webp',
+            'static/images/Products/3000/6.webp',
+            'static/images/Products/3000/7.webp',
+            'static/images/Products/3000/8.webp'
         ],
         specs: [
             { label: 'Тип', value: 'органическое удобрение' },
@@ -87,17 +98,80 @@ const modalOldPrice = document.getElementById('modalOldPrice');
 const modalSpecs = document.getElementById('modalSpecs');
 const modalClose = document.getElementById('modalClose');
 
+// Modal slider
+const modalSlider = {
+    thumbnailsContainer: null,
+    thumbnailItems: [],
+    currentIndex: 0,
+    visibleCount: 5,
+    
+    init() {
+        this.thumbnailsContainer = document.getElementById('modalThumbnails');
+        this.updateVisibleCount();
+    },
+    
+    updateVisibleCount() {
+        this.visibleCount = window.innerWidth <= 480 ? 3 : 5;
+    },
+    
+    setThumbnails(images) {
+        this.thumbnailItems = Array.from(this.thumbnailsContainer.querySelectorAll('.thumbnail-item'));
+        this.currentIndex = 0;
+        this.updateSlider();
+    },
+    
+    updateSlider() {
+        if (!this.thumbnailItems.length) return;
+        
+        const thumbnailWidth = 60;
+        const gap = 12;
+        const scrollPosition = this.currentIndex * (thumbnailWidth + gap);
+        
+        this.thumbnailsContainer.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+        });
+        
+        this.updateActiveClass();
+    },
+    
+    updateActiveClass() {
+        this.thumbnailItems.forEach((item, index) => {
+            item.classList.toggle('active', index === this.currentIndex);
+        });
+    },
+    
+    next() {
+        if (this.currentIndex < this.thumbnailItems.length - 1) {
+            this.currentIndex++;
+            this.updateSlider();
+        }
+    },
+    
+    prev() {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updateSlider();
+        }
+    },
+    
+    goTo(index) {
+        this.currentIndex = index;
+        this.updateSlider();
+    }
+};
+
 // Оставляем глобальной функцией, т.к. она вызывается из кнопок "Заказать"
 window.openModal = function(productKey) {
     const product = productsData[productKey];
     if (!product) return;
-    
+
     // Set main info
     modalTitle.textContent = product.name;
     modalSubtitle.textContent = product.subtitle;
     modalPrice.textContent = `Акция : ${product.price}`;
     modalOldPrice.textContent = product.oldPrice;
-    
+
     // Set specs
     modalSpecs.innerHTML = product.specs.map(spec => `
         <li>
@@ -105,31 +179,32 @@ window.openModal = function(productKey) {
             <span class="spec-value">${spec.value}</span>
         </li>
     `).join('');
-    
+
     // Set images
     if (product.images.length > 0) {
         modalMainImg.src = product.images[0];
-        
+
         // Create thumbnails
         modalThumbnails.innerHTML = product.images.map((img, index) => `
             <div class="thumbnail-item ${index === 0 ? 'active' : ''}" data-index="${index}">
                 <img src="${img}" alt="thumbnail ${index + 1}">
             </div>
         `).join('');
-        
+
+        // Initialize slider
+        modalSlider.init();
+        modalSlider.setThumbnails(product.images);
+
         // Add click handlers to thumbnails
         document.querySelectorAll('.thumbnail-item').forEach(item => {
             item.addEventListener('click', function() {
-                const index = this.dataset.index;
+                const index = parseInt(this.dataset.index);
                 modalMainImg.src = product.images[index];
-                
-                // Update active class
-                document.querySelectorAll('.thumbnail-item').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
+                modalSlider.goTo(index);
             });
         });
     }
-    
+
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 };
@@ -151,6 +226,18 @@ modalOverlay.addEventListener('click', function(event) {
 
 // Закрытие по клику на крестик
 modalClose.addEventListener('click', closeModalDirect);
+
+// Modal slider buttons
+const modalSliderPrev = document.getElementById('modalSliderPrev');
+const modalSliderNext = document.getElementById('modalSliderNext');
+
+if (modalSliderPrev) {
+    modalSliderPrev.addEventListener('click', () => modalSlider.prev());
+}
+
+if (modalSliderNext) {
+    modalSliderNext.addEventListener('click', () => modalSlider.next());
+}
 
 // Close modal on Escape key
 document.addEventListener('keydown', function(e) {
@@ -421,20 +508,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Image Gallery
 const galleryImages = [
-    'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/55450d06-1ae1-44a3-af1a-d4503267ecfd.jpg',
-    'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/3103ef77-6bc7-4425-965c-24dcecd7f46b.jpg',
-    'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/630c0481-0779-4473-bb10-c360e671a4c1.jpg'
+    'static/images/Life/1.jpg',
+    'static/images/Life/2.jpg',
+    'static/images/Life/3.jpg'
 ];
 
 let currentImageIndex = 0;
 
 // Production Gallery
 const productionGalleryImages = [
-    'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/c16d3c1e-70c6-4e59-9628-70ee2da00c2f.jpg',
-    'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/bf29379a-1373-434a-a690-4a396bb5a4a9.jpg',
-    'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/baaea6c8-2aaf-413b-be06-adcad426dfca.jpg',
-    'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/04993ab3-fda7-4f62-9867-017014af9274.jpg',
-    'https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/uploads/340714/d24d8c1b-3e19-45cf-a63e-2b602686631c.jpg'
+    'static/images/Factory/1.jpg',
+    'static/images/Factory/2.jpg',
+    'static/images/Factory/3.jpg',
+    'static/images/Factory/4.jpg',
+    'static/images/Factory/5.jpg'
 ];
 
 let currentProductionImageIndex = 0;
