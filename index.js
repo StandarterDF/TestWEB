@@ -57,17 +57,16 @@ const productsData = {
             { label: 'цвет', value: 'серый' },
             { label: 'вес', value: '400 гр.' },
             { label: 'Класс безопасности', value: '4 (безопасный)' },
-            { label: 'Срок годности', value: 'Неограничен' },
-            { label: 'Гарантийный срок', value: '12 мес.' }
+            { label: 'Срок годности', value: 'Неограничен' }
         ],
         marketplaceLinks: {
             ozon: 'https://www.ozon.ru/product/eko-orgamin-organicheskoe-udobrenie-dlya-uluchsheniya-pochvy-400-g-2972914790',
             wb: 'https://www.wildberries.ru/catalog/601060246'
         }
     },
-    'Эко-Оргамин 3000г': {
-        name: 'Эко-Оргамин Профи',
-        subtitle: 'Выгодная упаковка для больших огородов',
+    'Эко-Оргамин 3кг': {
+        name: 'Эко-Оргамин Стандарт',
+        subtitle: 'Выгодная упаковка в прочной банке',
         price: '365',
         oldPrice: '2 800',
         images: [
@@ -85,12 +84,33 @@ const productsData = {
             { label: 'цвет', value: 'серый' },
             { label: 'вес', value: '3000 гр. (3 кг)' },
             { label: 'Класс безопасности', value: '4 (безопасный)' },
-            { label: 'Срок годности', value: 'Неограничен' },
-            { label: 'Гарантийный срок', value: '12 мес.' }
+            { label: 'Срок годности', value: 'Неограничен' }
         ],
         marketplaceLinks: {
             ozon: 'https://www.ozon.ru/product/eko-orgamin-organicheskoe-udobrenie-dlya-uluchsheniya-pochvy-3000-g-3552516655/',
             wb: 'https://www.wildberries.ru/catalog/846326541'
+        }
+    },
+    'Эко-Оргамин 10кг': {
+        name: 'Эко-Оргамин Профи',
+        subtitle: 'Удобный мешок для средних и больших участков',
+        price: '890',
+        oldPrice: '1 200',
+        images: [
+            'static/images/Products/10000/1.jpg',
+            'static/images/Products/10000/2.jpg',
+            'static/images/Products/10000/3.jpg'
+        ],
+        specs: [
+            { label: 'Тип', value: 'органическое удобрение' },
+            { label: 'цвет', value: 'серый' },
+            { label: 'вес', value: '10 кг' },
+            { label: 'Класс безопасности', value: '4 (безопасный)' },
+            { label: 'Срок годности', value: 'Неограничен' }
+        ],
+        marketplaceLinks: {
+            ozon: 'https://www.ozon.ru/product/eko-orgamin-organicheskoe-udobrenie-dlya-uluchsheniya-pochvy-10-kg',
+            wb: 'https://www.wildberries.ru/catalog/000000000'
         }
     }
 };

@@ -337,31 +337,31 @@
                             <stop offset="100%" stop-color="#388E3C"/>
                         </linearGradient>
                     </defs>
-                    
+
                     <!-- Банка (исправлен стык цилиндра и дна) -->
                     <path d="M52 58 Q52 52 58 52 L142 52 Q148 52 148 58 L148 202 L52 202 Z" fill="url(#jarGrad)"/>
                     <ellipse cx="100" cy="202" rx="48" ry="10" fill="#43A047"/>
-                    
+
                     <!-- Крышка -->
                     <rect x="48" y="38" width="104" height="18" rx="5" fill="url(#lidGrad)"/>
                     <rect x="52" y="34" width="96" height="7" rx="3" fill="#81C784"/>
-                    
+
                     <!-- Ручка на крышке (улучшена форма) -->
                     <rect x="85" y="28" width="30" height="8" rx="4" fill="#66BB6A"/>
-                    
+
                     <!-- Этикетка -->
                     <rect x="58" y="75" width="84" height="95" rx="5" fill="#C8E6C9"/>
                     <rect x="62" y="79" width="76" height="18" rx="3" fill="#81C784"/>
-                    
+
                     <!-- Текст на этикетке (выровнен, добавлен современный шрифт) -->
                     <text x="100" y="92" text-anchor="middle" fill="#1B5E20" font-family="system-ui, sans-serif" font-size="11" font-weight="800">ЭКО</text>
                     <text x="100" y="112" text-anchor="middle" fill="#1B5E20" font-family="system-ui, sans-serif" font-size="12" font-weight="800">ОРГАМИН</text>
                     <text x="100" y="140" text-anchor="middle" fill="#2E7D32" font-family="system-ui, sans-serif" font-size="20" font-weight="900">3 КГ</text>
-                    <text x="100" y="158" text-anchor="middle" fill="#4CAF50" font-family="system-ui, sans-serif" font-size="12" font-weight="800">ПРОФИ</text>
-                    
+                    <text x="100" y="158" text-anchor="middle" fill="#4CAF50" font-family="system-ui, sans-serif" font-size="12" font-weight="800">СТАНДАРТ</text>
+
                     <!-- Блик на банке (аккуратный flat-блик) -->
                     <rect x="65" y="100" width="4" height="50" rx="2" fill="#FFFFFF" opacity="0.3"/>
-                    
+
                     <!-- Декоративные элементы -->
                     <circle cx="65" cy="115" r="4" fill="#4CAF50" opacity="0.5"/>
                     <circle cx="135" cy="150" r="4" fill="#4CAF50" opacity="0.5"/>
@@ -371,13 +371,68 @@
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3 class="product-title">Эко-Оргамин Профи</h3>
+                        <h3 class="product-title">Эко-Оргамин Стандарт</h3>
                         <span class="product-weight">3000 грамм (3 кг)</span>
                         <p class="product-desc">Выгодная упаковка в прочной банке для больших огородов, теплиц и профессионального использования. Хватит на весь сезон.</p>
                     </div>
                     <div>
                         <div class="price">365 ₽</div>
-                        <button class="btn-buy" onclick="openModal('Эко-Оргамин 3000г')">🛒 Заказать</button>
+                        <button class="btn-buy" onclick="openModal('Эко-Оргамин 3кг')">🛒 Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <svg width="200" height="240" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#A5D6A7"/>
+                                <stop offset="100%" stop-color="#66BB6A"/>
+                            </linearGradient>
+                            <linearGradient id="labelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#C8E6C9"/>
+                                <stop offset="100%" stop-color="#A5D6A7"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Мешок -->
+                        <path d="M60 50 L140 50 L150 200 Q150 218 100 218 Q50 218 50 200 Z" fill="url(#bagGrad)"/>
+
+                        <!-- Верх мешка (горловина) -->
+                        <rect x="55" y="40" width="90" height="15" rx="3" fill="#81C784"/>
+                        <path d="M55 40 Q100 35 145 40" stroke="#66BB6A" stroke-width="2" fill="none"/>
+
+                        <!-- Швы по бокам -->
+                        <path d="M60 50 L50 200 Q50 218 100 218" stroke="#4CAF50" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+                        <path d="M140 50 L150 200 Q150 218 100 218" stroke="#4CAF50" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+
+                        <!-- Этикетка -->
+                        <rect x="65" y="80" width="70" height="85" rx="4" fill="url(#labelGrad)"/>
+                        <rect x="69" y="84" width="62" height="16" rx="3" fill="#66BB6A"/>
+
+                        <!-- Текст на этикетке -->
+                        <text x="100" y="96" text-anchor="middle" fill="#1B5E20" font-family="system-ui, sans-serif" font-size="9" font-weight="800">ЭКО</text>
+                        <text x="100" y="115" text-anchor="middle" fill="#1B5E20" font-family="system-ui, sans-serif" font-size="11" font-weight="800">ОРГАМИН</text>
+                        <text x="100" y="140" text-anchor="middle" fill="#2E7D32" font-family="system-ui, sans-serif" font-size="18" font-weight="900">10 КГ</text>
+                        <text x="100" y="156" text-anchor="middle" fill="#4CAF50" font-family="system-ui, sans-serif" font-size="10" font-weight="800">ПРОФИ</text>
+
+                        <!-- Декоративные элементы -->
+                        <circle cx="75" cy="125" r="3" fill="#4CAF50" opacity="0.4"/>
+                        <circle cx="125" cy="145" r="3" fill="#4CAF50" opacity="0.4"/>
+                        <circle cx="80" cy="150" r="2" fill="#66BB6A" opacity="0.5"/>
+                        <circle cx="120" cy="130" r="2" fill="#66BB6A" opacity="0.5"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3 class="product-title">Эко-Оргамин Профи</h3>
+                        <span class="product-weight">10 килограмм</span>
+                        <p class="product-desc">Удобный мешок для средних и больших участков. Оптимальное соотношение цены и объема. Подходит для фермеров и дачников.</p>
+                    </div>
+                    <div>
+                        <div class="price">890 ₽</div>
+                        <button class="btn-buy" onclick="openModal('Эко-Оргамин 10кг')">🛒 Заказать</button>
                     </div>
                 </div>
             </div>
