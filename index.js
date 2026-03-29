@@ -111,7 +111,8 @@ const productsData = {
         marketplaceLinks: {
             ozon: 'https://www.ozon.ru/product/eko-orgamin-organicheskoe-udobrenie-dlya-uluchsheniya-pochvy-10-kg',
             wb: 'https://www.wildberries.ru/catalog/000000000'
-        }
+        },
+        available: false
     }
 };
 
@@ -211,9 +212,34 @@ window.openModal = function(productKey) {
     // Set marketplace links
     const ozonBtn = document.querySelector('.ozon-btn');
     const wbBtn = document.querySelector('.wb-btn');
-    if (product.marketplaceLinks) {
-        ozonBtn.href = product.marketplaceLinks.ozon;
-        wbBtn.href = product.marketplaceLinks.wb;
+    const marketplaceLinksContainer = document.querySelector('.marketplace-links');
+    
+    // Remove availability notice if exists
+    const existingNotice = marketplaceLinksContainer.parentElement.querySelector('.marketplace-availability');
+    if (existingNotice) {
+        existingNotice.remove();
+    }
+    
+    if (product.available === false) {
+        // Disable buttons
+        ozonBtn.classList.add('marketplace-btn-disabled');
+        wbBtn.classList.add('marketplace-btn-disabled');
+        ozonBtn.removeAttribute('href');
+        wbBtn.removeAttribute('href');
+        
+        // Add availability notice
+        const availabilityNotice = document.createElement('p');
+        availabilityNotice.className = 'marketplace-availability';
+        availabilityNotice.innerHTML = '⏳ На маркетплейсах пока нет<br>Уточняйте наличие по телефону';
+        marketplaceLinksContainer.parentElement.insertBefore(availabilityNotice, marketplaceLinksContainer);
+    } else {
+        // Enable buttons
+        ozonBtn.classList.remove('marketplace-btn-disabled');
+        wbBtn.classList.remove('marketplace-btn-disabled');
+        if (product.marketplaceLinks) {
+            ozonBtn.href = product.marketplaceLinks.ozon;
+            wbBtn.href = product.marketplaceLinks.wb;
+        }
     }
 
     // Set images
